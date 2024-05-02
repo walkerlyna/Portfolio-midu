@@ -1,0 +1,23 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Actualmente...",
+    title: "Freelancer",
+    description:
+      "Mi enfoque se centra en crear soluciones para mis clientes. Trabajo estrechamente con ellos para comprender sus necesidades y objetivos. Transformo esas ideas en sitios web y aplicaciones web personalizadas.",
+    link: "https://www.google.com/search?q=freelancer&rlz=1C1UEAD_esMX1072MX1072&oq=freelancer&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTISCAEQLhhDGMcBGNEDGIAEGIoFMgwIAhAjGCcYgAQYigUyDAgDEAAYQxiABBiKBTIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDM4MDBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8",
+  },
+  
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

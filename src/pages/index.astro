@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portfolio de Luis Soto - Frontend Developer"
+  description="Contrata a Luis Soto para Frontend Developer. Especializado en crear páginas únicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4 object-cover"
+        src="/luis.jpg"
+        alt="luis photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Luis Soto <a
+          href="https://linkedin.com/in/midudev"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
+        <span>+1 año de experiencia.</span><span class="text-yellow-200">
+          Desarrollador Frontend.</span
+        >
+        <span class="text-red-200"> De La Paz, México</span>.
+        <span class="text-sky-200">Especializado en crear páginas únicas.</span>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/luis-soto72/">
+          <LinkedInIcon class="size-4 md:size-6" />
+           LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/walkerlyna">
+          <GitHubIcon class="size-4 md:size-6" />
+           GitHub
+        </SocialPill>
+        <SocialPill href="mailto:sotomanriquez36@gmail.comcom">
+          <MailIcon class="size-4 md:size-6" />
+           sotomanriquez36@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+         Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>
